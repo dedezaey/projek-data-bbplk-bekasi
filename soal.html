@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+<style>
+	
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+
+
+
+</style>
+
+  <title></title>
+
+</head>
+<body>
+
+<!-- header -->
+
+    <div class= "countainer-fluid">
+        <div class="row">
+          <div class= "col-12 bg-primary text-light" style="height: 100px; background-image: url(aset/tembok.jpg);" ></div>
+
+
+
+<!-- menu -->
+
+
+          <nav class="navbar col-12 navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="#">Navigation</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+
+                <li class="nav-item ">
+                  <a class="nav-link active" href="#">Data komentar</a>
+                </li>    
+              </ul>
+              <form class="form-inline my-2 my-lg-0 " >
+                  <input class="form-control mr-sm-2" type="text" placeholder="search"> 
+                  <button class="btn btn-success my-2 my-sm-0" type="button" style="width: 100px; ">search</button>
+              </form>
+            </div>  
+          </nav>
+
+
+
+<!-- conten -->
+
+
+          <div class="col-12 col-md-8 col-lg-10 " style="min-height:650px; margin-top: 10px; margin-bottom: 10px; background-image: url(aset/background.jpg);">
+
+                <div class="container">
+
+
+<div class="container" >
+  <h2 align="center">Data komentar</h2>
+  <p align="center">inilah komentar para netizen!!</p>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>no</th>
+        <th>nama</th>
+        <th>Email</th>
+        <th>komentar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>mr.bean</td>
+        <td>mr.bean@example.com</td>
+        <td>lorem ipsum...</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>ultaman</td>
+        <td>ultraman@example.com</td>
+        <td>lorem ipsum...</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>fizi</td>
+        <td>fizi@example.com</td>
+        <td>lorem ipsum. . .</td>
+      </tr>
+     <tr>
+        <td>4</td>
+        <td>nobita</td>
+        <td>nobita@example.com</td>
+        <td>lorem ipsum. . .</td>
+      </tr>
+     <tr>
+        <td>5</td>
+        <td>uya kuya</td>
+        <td>tomket@example.com</td>
+        <td>lorem ipsum . . .</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+<!-- banner -->
+
+
+
+  <div class="col-12 col-md-4 col-lg-2 bg-danger text-light" >
+
+
+    <h4>inilah komentar terbaik</h4>
+
+
+<div class="media border p-3" style="">
+  <img src="aset/ultraman.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:50px;">
+  <div class="media-body">
+    <h4>ultraman <small><i>Posted on july 01, 2020</i></small></h4>
+    <p>ngopi anmin</p>
+    <div class="media p-3">
+      <img src="aset/123.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:50px;">
+      <div class="media-body">
+        <h4>admin <small><i>Posted on july 02 2020</i></small></h4>
+        <p>siap ultraman</p>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+
+
+  </div>
+ </div>
+
+
+
+<!-- komentar -->
+
+<div class="container-fluid" style="height: 500px;">
+ 
+  <div class="row">
+    <div class="col-sm-3" style="background-color: blue;height: 500px;">
+      
+      <div class="media border p-3 text-light">
+  <img src="aset/1.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+  <div class="media-body">
+    <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+    <p>Lorem ipsum...</p>
+    <div class="media p-3">
+      <img src="aset/2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+      <div class="media-body">
+        <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+        <p>Lorem ipsum...</p>
+      </div>
+    </div> 
+  </div>
+</div>
+</div>
+
+    <div class="col-sm-3" style="background-color: yellow;height: 500px;">
+    </div>
+    <div class="col-sm-3" style="background-color: green;height: 500px;"></div>
+    <div class="col-sm-3" style="background-color: red;height: 500px;"></div>
+
+  </div>
+</div>
+
+
+
+<!-- footer -->
+
+
+          <div class="col-12 bg-info text-light">
+            <marquee> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</marquee>
+
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>  
+</body>
+</html>
