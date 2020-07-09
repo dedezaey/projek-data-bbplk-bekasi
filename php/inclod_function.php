@@ -45,46 +45,48 @@ if (isset($_GET['panjang'])) {
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 
+</head>
+
+<body>
 
 
-	<body>
+	<h1 class="bg bg-primary text-light" align="center">!!perhitungan!!</h1>
 
 
-		<h1 class="bg bg-primary text-light" align="center">perhitungan</h1>
-
+	<form action="" method="" class="btn btn-danger">
 		<!-- lingkaran -->
-		<form action="" method="">
-			lingkaran : <input type="number" name="jari" require><br>
 
-			luas lingkaran : <?php  echo("$luas<br>"); ?>
-			keliling lingkaran : <?php  echo("$kel<br>"); ?>
+		<h5>lingkaran</h5>
+		lingkaran : <input type="number" name="jari" require><br>
+
+		luas lingkaran : <?php  echo("$luas<br>"); ?>
+		keliling lingkaran : <?php  echo("$kel<br>"); ?>
+		<?php echo("<hr>") ?>
+
+		<!-- persegi panjang -->
+		<h5>persegi </h5>
+		<form action="" method="">
+			persegi : <input type="number" name="segi1" require><br>
+
+
+			luas persegi : <?php  echo("$luassegi <br>") ?>
+			keliling persegi : <?php  echo("$kelsegi <br>") ?>
+
+
 			<?php echo("<hr>") ?>
 
-			<!-- persegi panjang -->
-
-			<form action="" method="">
-				persegi : <input type="number" name="segi1" require><br>
-
-
-				luas persegi : <?php  echo("$luassegi <br>") ?>
-				keliling persegi : <?php  echo("$kelsegi <br>") ?>
+			<!-- persegi -->
+			<h5>persegi panjang</h5>
+			lebar : <input type="number" name="panjang" require><br>
+			panjang :<input type="number" name="panjang" require><br>
 
 
-				<?php echo("<hr>") ?>
+			luas persegi : <?php  echo("$luaspanjang<br>") ?>
+			keliling persegi : <?php  echo("$kelpanjang<br>") ?>
+			<?php echo("<hr>") ?>
+			<input type="submit" name="hitung" value="hitung" class="btn btn-primary">
 
-				<!-- persegi -->
+		</form>
 
-				<form action="" method="">
-					luas : <input type="number" name="panjang" require><br>
-					panjang<input type="number" name="panjang" require><br>
-
-
-					luas persegi : <?php  echo("$luaspanjang<br>") ?>
-					keliling persegi : <?php  echo("$kelpanjang<br>") ?>
-					<?php echo("<hr>") ?>
-					<input type="submit" name="hitung" value="hitung" class="btn btn-primary">
-
-				</form>
-
-			</body>
-			</html>
+	</body>
+	</html>
