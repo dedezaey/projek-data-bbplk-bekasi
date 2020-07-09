@@ -253,7 +253,7 @@
 						<input type="text" id="lname" name="masukan E-mail" placeholder="<?php echo($jumlah) ?>" readonly>
 
 						<label for="lname">total</label>
-						<input type="text" id="none" name="total_harga" placeholder="<?php echo($total) ?>" readonly>
+						<input type="text" id="total" name="total_harga" placeholder="<?php echo($total) ?>" readonly>
 
 						<label for="lname">diskon</label>
 						<input type="text" id="lname" name="masukan E-mail" placeholder="<?php echo($diskon) ?>" readonly>
@@ -261,7 +261,7 @@
 
 
 						<label for="lname">uang yang harus di bayar</label>
-						<input type="number" id="lname" name="uangbayar" class="form-control" onchange="getKembali()" onkeyup="getKembali()" id="bayar" placeholder="Masukkan Jumlah Uang Bayar" required style="width: 100%; height: 50px;">
+						<input type="number"  name="uangbayar" class="form-control" onchange="getKembali()" onkeyup="getKembali()" id="bayar" placeholder="Masukkan Jumlah Uang Bayar" required style="width: 100%; height: 50px;">
 
 
 

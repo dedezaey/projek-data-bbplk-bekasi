@@ -3,10 +3,10 @@
 $totalharga = $_POST['total_harga'];
 $uangbayar = $_POST['uangbayar'];
 
-if ($totalharga<$uangbayar) {
+if ($totalharga>$uangbayar) {
 	echo "<script> alert ('maaf uang bayar anda kurang')</script>";
 	echo "<script> window.history.back ()</script>";
-}elseif($totalharga>$uangbayar) {
+}elseif($totalharga<$uangbayar) {
 	$uangkembali = number_format($uangbayar + $totalharga,0,",",".");
 	echo "<script> alert ('trimakasih uang kembali anda sebesar Rp.$uangkembali');</script>";
 	echo "<script> window.history.back</script>";
