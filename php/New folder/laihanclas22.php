@@ -1,6 +1,6 @@
 <?php 
 class KendaraanBermotor{
-	protected $jumlahBan;
+	protected $jumlahBan; //tulisan harus kecil besar
 	protected $jenisMesin;
 	protected $warnaKendaraan;
 	protected $bahanBakar;
@@ -48,16 +48,17 @@ class Mobil extends KendaraanBermotor{
 $kendaraanZae = new KendaraanBermotor("3", "2 Tak", "Orange", "Solar");
 $kendaraanAldi = new Mobil("4 Tak", "Pink", "Pertamax");
 $kendaraanFaris = new Motor("4 Tak", "Biru", "Premium");
+//tugas
 $kendaraanTio = new KendaraanBermotor("3", "2 Tak", "Hijau", "Biosolar");
-$kendaraanRiski = new Mobil("4 Tak", "Silver", "Dexlite");
-$kendaraanJapar = new Motor("4 Tak", "Gold", "Pertalite");
+$kendaraanRiski = new Mobil("4 Tak", "biru muda", "Dexlite");
+$kendaraanJapar = new Motor("4 Tak", "putih abu abu", "Pertalite");
 
 
-echo"Zaenudin memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanZae->getBan(). " dengan mesin ".$kendaraanZae->getJenisMesin(). " berwarna ".$kendaraanZae->getWarna()." dengan bahan bakar ".$kendaraanZae->getBahanBakar()."<br><hr>";
-echo"Aldi memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanAldi->getBan()." dengan mesin ".$kendaraanAldi->getJenisMesin()." berwarna ".$kendaraanAldi->getWarna()." dengan bahan bakar ".$kendaraanAldi->getBahanBakar()."<br><hr>";
-echo"Faris memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanFaris->getBan()." dengan mesin ".$kendaraanFaris->getJenisMesin()." berwarna ".$kendaraanFaris->getWarna()."<br><hr>";
+echo"Zaenudin memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak :".$kendaraanZae->getBan(). " dengan mesin :".$kendaraanZae->getJenisMesin(). " berwarna :".$kendaraanZae->getWarna()." dengan bahan bakar ".$kendaraanZae->getBahanBakar()."<br><hr>";
+echo"Aldi memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak :".$kendaraanAldi->getBan()." dengan mesin :".$kendaraanAldi->getJenisMesin()." berwarna :".$kendaraanAldi->getWarna()." dengan bahan bakar ".$kendaraanAldi->getBahanBakar()."<br><hr>";
+echo"Faris memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak :".$kendaraanFaris->getBan()." dengan mesin :".$kendaraanFaris->getJenisMesin()." berwarna :".$kendaraanFaris->getWarna()."<br><hr>";
 
-echo"Setio memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanTio->getBan(). " dengan mesin ".$kendaraanTio->getJenisMesin(). " berwarna ".$kendaraanTio->getWarna()." dengan bahan bakar ".$kendaraanTio->getBahanBakar()."<br><hr>";
-echo"Riski memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanRiski->getBan()." dengan mesin ".$kendaraanRiski->getJenisMesin()." berwarna ".$kendaraanRiski->getWarna()." dengan bahan bakar ".$kendaraanRiski->getBahanBakar()."<br><hr>";
-echo"Japar memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanJapar->getBan()." dengan mesin ".$kendaraanJapar->getJenisMesin()." berwarna ".$kendaraanJapar->getWarna()."<br><hr>";
+echo"Setio memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak :".$kendaraanTio->getBan(). " dengan mesin :".$kendaraanTio->getJenisMesin(). " berwarna :".$kendaraanTio->getWarna()." dengan bahan bakar :".$kendaraanTio->getBahanBakar()."<br><hr>";
+echo"Riski memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanRiski->getBan()." dengan mesin :".$kendaraanRiski->getJenisMesin()." berwarna :".$kendaraanRiski->getWarna()." dengan bahan bakar ".$kendaraanRiski->getBahanBakar()."<br><hr>";
+echo"Japar memiliki kendaraan terbaru dengan teknologi terkini<br> dengan jumlah ban sebanyak ".$kendaraanJapar->getBan()." dengan mesin :".$kendaraanJapar->getJenisMesin()." berwarna :".$kendaraanJapar->getWarna()."<br><hr>";
 ?>
