@@ -2,14 +2,14 @@
 require_once "koneksi.php";
 $id = $_GET['id'];
 
-$sql = "DELETE FROM tb_user WHERE id_user='id'";
+$sql = "DELETE FROM tb_barang WHERE id_barang='id'";
 
 if ($conn->query($sql) === TRUE) {
 	echo"<script>alert ('data berhasil di hapus') </script>";
-	echo "<script>window.location.assign('aset/from3.php')</script>"; 
+	echo "<script>window.location.assign('from.php')</script>"; 
 }else{
 	echo "<script> alert ('data gagal di dihapus $conn->error')</script>";
-	echo "<script> window.location.assign ('aset/from3.php')</script> ";
+	echo "<script> window.location.assign ('from.php')</script> ";
 }
 
 

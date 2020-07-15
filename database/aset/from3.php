@@ -1,5 +1,5 @@
 <?php 
-require_once "../inser.php"
+require_once "koneksi.php"
 
 ?>
 
@@ -81,88 +81,6 @@ require_once "../inser.php"
       opacity: 0.8;
     }
 
-    /* Extra styles for the cancel button */
-    .cancelbtn {
-      width: auto;
-      padding: 10px 18px;
-      background-color: #f44336;
-    }
-
-    /* Center the image and position the close button */
-    .imgcontainer {
-      text-align: center;
-      margin: 24px 0 12px 0;
-      position: relative;
-    }
-
-    img.avatar {
-      width: 40%;
-      border-radius: 50%;
-    }
-
-    .container {
-      padding: 16px;
-    }
-
-    span.psw {
-      float: right;
-      padding-top: 16px;
-    }
-
-    /* The Modal (background) */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      padding-top: 60px;
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-      border: 1px solid #888;
-      width: 80%; /* Could be more or less, depending on screen size */
-    }
-
-    /* The Close Button (x) */
-    .close {
-      position: absolute;
-      right: 25px;
-      top: 0;
-      color: #000;
-      font-size: 35px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: red;
-      cursor: pointer;
-    }
-
-    /* Add Zoom Animation */
-    .animate {
-      -webkit-animation: animatezoom 0.6s;
-      animation: animatezoom 0.6s
-    }
-
-    @-webkit-keyframes animatezoom {
-      from {-webkit-transform: scale(0)} 
-      to {-webkit-transform: scale(1)}
-    }
-
-    @keyframes animatezoom {
-      from {transform: scale(0)} 
-      to {transform: scale(1)}
-    }
 
     /* Change styles for span and cancel button on extra small screens */
     @media screen and (max-width: 300px) {
@@ -183,6 +101,22 @@ require_once "../inser.php"
 
 </head>
 <body>
+
+  <?php 
+//jika $_GET['q']ada isinya
+  if (isset($_GET['q'])) {
+  //yang dijalankan isinya 
+    $q = $_GET['q'];
+    $sql = "SELECT*FROM tb_user WHERE nama_user LIKE '%$q%' ";
+  }else{
+    $sql = "SELECT*FROM tb_user";
+  }
+  $result = $conn->query($sql);
+  
+
+
+  ?>
+
 
   <!-- header -->
 
@@ -212,9 +146,9 @@ require_once "../inser.php"
               <a class="nav-link active" href="#">Guest Book</a>
             </li>    
           </ul>
-          <form class="form-inline my-2 my-lg-0 " >
-            <input class="form-control mr-sm-2" type="text" placeholder="search"> 
-            <button class="btn btn-success my-2 my-sm-0" type="button" style="width: 100px; ">search</button>
+          <form class="form-inline my-2 my-lg-0  " action="" method="GET" >
+            <input class="form-control mr-sm-2" type="text" name="q" placeholder="search"> 
+            <button class="btn btn-success my-2 my-sm-0" type="submit" name="q" style="width: 100px; ">search</button>
           </form>
         </div>  
       </nav>
@@ -242,7 +176,7 @@ require_once "../inser.php"
            <label for="lname">password</label>
            <input type="password"  name="passwordUser" placeholder="masukan password">
 
-           <input type="submit" value="Kirim">
+           <input  type="submit" value="Kirim">
 
          </form>
 
@@ -254,6 +188,7 @@ require_once "../inser.php"
               <th>no</th>
               <th>nama</th>
               <th>email</th>
+              <th>action</th>
             </tr>
           </thead>
           <tbody>
@@ -271,11 +206,14 @@ require_once "../inser.php"
                   <td><?=$row['id_user'] ?></td>
                   <td><?=$row['name_user'] ?></td>
                   <td><?=$row['email_user'] ?></td>
+
+                  <td>
+                    <a onclick="return confirm('Anda yakin akan menghapus record ini')" class="btn btn-danger" href="prosesdeletuser.php?id=<?=$row['id_user'] ?>">delate</a>
+                    <a href="" onclick="showUpdateForm('<?=$row['id_user'] ?>', '<?=$row['name_user'] ?>', '<?=$row['email_user'] ?>')" class="btn btn-primary" href="" data-toggle="modal" data-target="#exampleModal">
+                      update
+                    </a>
+                  </td>
                 </tr>
-
-                <a onclick="return confirm('Anda yakin akan menghapus record ini')" class="btn btn-danger" href="../prosesdeletuser.php<?phpid<?=$row['id_user'] ?>">delate</a>
-
-
                 <?php
               }
             }else{
@@ -289,6 +227,9 @@ require_once "../inser.php"
       </tbody>
 
     </table>
+
+    <!-- Button trigger modal -->
+
 
   </div>
 </div>
@@ -402,6 +343,53 @@ require_once "../inser.php"
 </div>
 
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="modal-body">
+          <form action="update.php" method="POST">
+            <h5 class="modal-title" id="exampleModalLabel" align="center">up date data</h5>
+
+            <label for="fname">nomer</label>
+            <input type="text"  name="idUser" id="modal-id-user" placeholder="nomer anda" readonly="">
+
+
+            <label for="fname">user name</label>
+            <input type="text"  name="namaUser" id="modal-nama-user" placeholder="Nama lengkap . .">
+
+            <label for="lname">E-mail</label>
+            <input type="email"  name="emailUser" id="modal-email-user" placeholder="alamat email" style="width: 100%;">
+
+            <input type="submit" value="update">
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+  //fungsi untuk memasukan nilai pada form uptudate
+  function showUpdateForm(id,nama,email,password){
+    document.getElementById('modal-id-user').value = id;
+    document.getElementById('modal-nama-user').value = nama;
+    document.getElementById('modal-email-user').value = email;
+  }
+
+</script>
 
 
 

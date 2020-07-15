@@ -1,179 +1,28 @@
+
+<?php 
+require_once "koneksi.php"
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/popper.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
 
   <style>
 
-    /* Style inputs with type="text", select elements and textareas */
-    input[type=text], select, textarea {
-      width: 100%; /* Full width */
-      padding: 12px; /* Some padding */ 
-      border: 1px solid #ccc; /* Gray border */
-      border-radius: 4px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-    }
-
-    /* Style the submit button with a specific background color etc */
-    input[type=submit] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    /* When moving the mouse over the submit button, add a darker green color */
-    input[type=submit]:hover {
-      background-color: #45a049;
-    }
-
-    /* Add a background color and some padding around the form */
-    .container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
 
 
+  </style>
 
-    /*loginan*/
-
-
-    /* Full-width input fields */
-    input[type=text], input[type=password] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-
-    /* Set a style for all buttons */
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      opacity: 0.8;
-    }
-
-    /* Extra styles for the cancel button */
-    .cancelbtn {
-      width: auto;
-      padding: 10px 18px;
-      background-color: #f44336;
-    }
-
-    /* Center the image and position the close button */
-    .imgcontainer {
-      text-align: center;
-      margin: 24px 0 12px 0;
-      position: relative;
-    }
-
-    img.avatar {
-      width: 40%;
-      border-radius: 50%;
-    }
-
-    .container {
-      padding: 16px;
-    }
-
-    span.psw {
-      float: right;
-      padding-top: 16px;
-    }
-
-    /* The Modal (background) */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      padding-top: 60px;
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-      border: 1px solid #888;
-      width: 80%; /* Could be more or less, depending on screen size */
-    }
-
-    /* The Close Button (x) */
-    .close {
-      position: absolute;
-      right: 25px;
-      top: 0;
-      color: #000;
-      font-size: 35px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: red;
-      cursor: pointer;
-    }
-
-    /* Add Zoom Animation */
-    .animate {
-      -webkit-animation: animatezoom 0.6s;
-      animation: animatezoom 0.6s
-    }
-
-    @-webkit-keyframes animatezoom {
-      from {-webkit-transform: scale(0)} 
-      to {-webkit-transform: scale(1)}
-    }
-
-    @keyframes animatezoom {
-      from {transform: scale(0)} 
-      to {transform: scale(1)}
-    }
-
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-      span.psw {
-       display: block;
-       float: none;
-     }
-     .cancelbtn {
-       width: 100%;
-     }
-   }
-
-
-
- </style>
-
- <title></title>
+  <title></title>
 
 </head>
 <body>
@@ -182,7 +31,7 @@
 
   <div class= "countainer-fluid">
     <div class="row">
-      <div class= "col-12 bg-primary text-light" style="height: 100px; background-image: url(../aset/tembok.jpg);" ></div>
+      <div class= "col-12 bg-primary text-light" style="height: 100px; background-image: url(../../aset/tembok.jpg);" ></div>
 
 
 
@@ -218,174 +67,210 @@
       <!-- conten -->
 
 
-      <div class="col-12 col-md-8 col-lg-10 " style="min-height:650px; margin-top: 10px; margin-bottom: 10px; background-image: url(../aset/background.jpg);">
+      <div class="col-12 col-md-8 col-lg-10 " style="min-height:650px; margin-top: 10px; margin-bottom: 10px; background-image: url(../../aset/background.jpg);">
         <div class="container">
-
-          <h1 align="cenrer">from penjualan barang</h1>
-          <form action="harga.php" method="post" style="width: 300px; padding-right: 30px;" >
-            <p>nama barang</p>
-            <select class="form-control" name="nama_barang" id="tombol1">
-              <option value="">nama barang</option>
-              <option value="cabai">cabai</option>
-              <option value="merica">merica</option>
-              <option value="tomat">tomat</option>
-              <option value="bawamh merah">bawang merah</option>
-              <option value="bawang putih">bawang putih</option>
-            </select>
-            <p>harga barang</p>
-            <input type="number" name="harga_barang" style="width: 300px">
-            <p>jumlah barang</p>
-            <input type="number" name="jumlah_barang" style="width: 300px">
-            <input type="submit" name="#" class="btn btn-primary">
-          </form>
-        </div>
-      </div>
+          <div class="row justify-content-center mt-5">
+            <div class="card">
+              <div class="card-header bg-transparent mb-0"><h5 class="text-center"> <span class="font-weight-bold text-primary"></span></h5></div>
+              <div class="card-body">
 
 
 
-      <!-- banner -->
+                <form action="inser2.php" method="POST">
+
+                  <label for="fname">nama barang</label>
+                  <input type="text"  name="namaBarang" placeholder="Nama barang" style="width: 100%">
+
+                  <label for="lname">satuan barang </label>
+                  <input type="number"  name="satuanBarang" placeholder="satuan" style="width: 100%;">
+
+                  <label for="lname">harga barang</label>
+                  <input type="number"  name="hargaBarang" placeholder="harga barang" style="width: 100%;">
+
+                  <input type="submit" value="Kirim">
+
+                </form>
 
 
 
-      <div class="col-12 col-md-4 col-lg-2 bg-danger">
+
+                <!-- tabel data -->
+
+                <table class="table table-dark table-hover">
+                  <thead>
+                    <tr>
+                      <th>no</th>
+                      <th>nama barang</th>
+                      <th>satuan</th>
+                      <th>harga</th>
+                      <th>season</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <?php 
+                    $sql = "SELECT*FROM tb_barang";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+  //akan dijalankan jika rcornya adalah
+                      while ($row = $result->fetch_assoc()) { ?>
 
 
-        <!-- login -->
+                        <tr>
+                          <td><?=$row['id_barang'] ?></td>
+                          <td><?=$row['nama_barang'] ?></td>
+                          <td><?=$row['satuan_barang'] ?></td>
+                          <td><?=$row['harga_barang'] ?></td>
 
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                          <td>
+                            <a onclick="return confirm('Anda yakin akan menghapus record ini')" class="btn btn-danger" href="prosesdeletuser.php?id=<?=$row['id_barang'] ?>">delate</a>
 
-        <div id="id01" class="modal">
+                            <a href="" onclick="showUpdateForm('<?=$row['id_barang'] ?>', '<?=$row['nama_barang'] ?>', '<?=$row['satuan_barang'] ?>', '<?=$row['harga_barang'] ?>' )" class="btn btn-primary" href="" data-toggle="modal" data-target="#exampleModal">
+                              update
+                            </a>
+                          </td>
+                        </tr>
+                        <?php
+                      }
+                    }else{
+              //akan dijalankan jika recodnya kosong
+                      echo("<tr><td colspan='3'>recodnya masih kosong</td></tr>");
+                    }
 
-          <form class="modal-content animate" action="/action_page.php" method="post">
+                    ?>
+                  </tbody>
+                </table>
+              </tbody>
 
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <img src="../aset/1.png" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="container">
-
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-
-              <button type="submit">Login</button>
-
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" onclick="document.getElementById('id01')  .style.display='none'" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-          </form>
-        </div>
-
-        <script>
-      // Get the modal
-      var modal = document.getElementById('id01');
-
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
-  <!-- see profil -->
-
-  <div class="card" style="width:250px;">
-    <img class="card-img-top" src="../aset/2.png" alt="Card image">
-    <div class="card-img-overlay">
-      <a href="#" class="btn btn-primary">See Profile</a>
-      <button class="btn btn-primary" style="width: 120px;">
-       <span class="spinner-border spinner-border-sm"></span>
-       Loading..
-     </button>
-   </div>
- </div>
-
-
- <div class="card" style="width:250px">
-  <img class="card-img-top" src="../aset/1.png" alt="Card image">
-  <div class="card-img-overlay">
-    <a href="#" class="btn btn-primary">See Profile</a>
-    <button data-toggle="collapse" data-target="#demo" class="btn btn-primary" style="width: 130px;">klik</button>
-
-    <div id="demo" class="collapse">
-      Lorem ipsum dolor text....
-    </div>
-
-  </div>
-</div>
-
-
-<div class="card" style="width:250px">
-  <img class="card-img-top" src="../aset/123.png" alt="Card image">
-  <div class="card-img-overlay">
-    <a href="#" class="btn btn-primary">See Profile</a>
-  </div>
-</div>
-
-
-</div>
+            </table>
 
 
 
-<div class="container-fluid" style="height: 500px;">
 
-  <div class="row">
-    <div class="col-sm-3" style="background-color: blue;height: 500px;">
 
-      <div class="media border p-3 text-light">
-        <img src="../aset/1.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-        <div class="media-body">
-          <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
-          <p>Lorem ipsum...</p>
-          <div class="media p-3">
-            <img src="../aset/2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
-            <div class="media-body">
-              <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
-              <p>Lorem ipsum...</p>
-            </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <!-- banner -->
 
-    <div class="col-sm-3" style="background-color: yellow;height: 500px;">
+
+
+  <div class="col-12 col-md-4 col-lg-2 bg-danger">
+
+
+
+  </div>
+
+
+
+  <div class="container-fluid" style="height: 500px;">
+
+    <div class="row">
+      <div class="col-sm-3" style="background-color: blue;height: 500px;">
+
+        <div class="media border p-3 text-light">
+          <img src="../aset/1.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+          <div class="media-body">
+            <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+            <p>Lorem ipsum...</p>
+            <div class="media p-3">
+              <img src="../aset/2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+              <div class="media-body">
+                <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                <p>Lorem ipsum...</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3" style="background-color: yellow;height: 500px;">
+
+
+
+
+      </div>
+      <div class="col-sm-3" style="background-color: green;height: 500px;"></div>
+      <div class="col-sm-3" style="background-color: red;height: 500px;"></div>
+
     </div>
-    <div class="col-sm-3" style="background-color: green;height: 500px;"></div>
-    <div class="col-sm-3" style="background-color: red;height: 500px;"></div>
+  </div>
+
+
+
+  <!-- footer -->
+
+
+  <div class="col-12 bg-info text-light">
+    <marquee> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</marquee>
 
   </div>
 </div>
-
-
-
-<!-- footer -->
-
-
-<div class="col-12 bg-info text-light">
-  <marquee> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</marquee>
-
-</div>
-</div>
 </div>
 
 
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="modal-body">
+          <form action="updatebarang.php" method="POST">
+            <h5 class="modal-title" id="exampleModalLabel" align="center">up date data</h5>
+
+            <label for="fname">nomer</label>
+            <input type="number"  name="idBarang" id="modal-id-barang" placeholder="nomer anda" readonly="" style="width: 100%">
+
+
+            <label for="fname">nama barang</label>
+            <input type="text"  name="namaBarang" id="modal-nama-barang" placeholder="nama barang" style="width: 100%">
+
+            <label for="lname">satuan barang</label>
+            <input type="number"  name="satuanBarang" id="modal-satuan-barang" placeholder="satuan barang" style="width: 100%;">
+
+            <label for="lname">harga barang</label>
+            <input type="number"  name="hargaBarang" id="modal-harga-barang" placeholder="harga barang" style="width: 100%;" readonly="">
+
+            <input type="submit" value="update">
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+  //fungsi untuk memasukan nilai pada form uptudate
+  function showUpdateForm(id,nama,satuan,harga){
+    document.getElementById('modal-id-barang').value = id;
+    document.getElementById('modal-nama-barang').value = nama;
+    document.getElementById('modal-satuan-barang').value = satuan;
+    document.getElementById('modal-harga-barang').value = harga;
+  }
+
+</script>
 
 
 
