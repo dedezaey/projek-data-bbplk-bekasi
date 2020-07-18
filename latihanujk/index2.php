@@ -191,25 +191,12 @@ require_once "konksi.php"
 
         </form>
 
-        <form class="form-inline my-2 my-lg-0" action="" method="GET">
+        <form class="form-inline my-2 my-lg-0" >
           <input class="form-control mr-sm-2" type="text" placeholder="search" name="q"> 
           <button class="btn btn-success my-2 my-sm-0" type="submit3" >search</button>
         </form>
 
-        <?php 
-            //Jika $_GET['q'] ada isinya
-        if(isset($_GET['q'])){
-              //yang dijalankan jika ada isinya
-          $q = $_GET['q'];
-          $sql = "SELECT*FROM toko_buku WHERE nama_buku LIKE '%$q%'";
-        }else{
-              //Jika $_GET['q'] tidak ada isinya
-          $sql = "SELECT*FROM toko_buku";
-        }
-
-        $result = $conn->query($sql);
-
-        ?>  
+        
         <!-- tabel data -->
 
         <table class="table table-dark table-hover">
@@ -226,6 +213,19 @@ require_once "konksi.php"
           <tbody>
 
             <?php 
+
+ //Jika $_GET['q'] ada isinya
+            if(isset($_GET['q'])){
+              //yang dijalankan jika ada isinya
+              $q = $_GET['q'];
+              $sql = "SELECT*FROM toko_buku WHERE nama_buku LIKE '%$q%'";
+            }else{
+              //Jika $_GET['q'] tidak ada isinya
+              $sql = "SELECT*FROM toko_buku";
+            }
+
+            $result = $conn->query($sql);
+            
             $sql = "SELECT*FROM toko_buku";
             $result = $conn->query($sql);
 
